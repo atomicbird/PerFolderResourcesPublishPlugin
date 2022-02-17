@@ -19,7 +19,7 @@ let package = Package(
     ...
     dependencies: [
         ...
-        .package(name: "PerFolderResourcesPublishPlugin", url: "https://github.com/atomicbird/PerFolderResourcesPublishPlugin", from: "0.1.0")
+        .package(name: "PerFolderResourcesPublishPlugin", url: "https://github.com/atomicbird/PerFolderResourcesPublishPlugin", .branch("main"))
     ],
     targets: [
         .target(
@@ -33,6 +33,8 @@ let package = Package(
     ...
 )
 ```
+
+In the `.package` entry above it's currently necessary to use `.branch("main")` but with luck the PR mentioned earlier will be accepted and then this can be changed to a version requirement.
 
 For more information on how to use the Swift Package Manager, check out [this article](https://www.swiftbysundell.com/articles/managing-dependencies-using-the-swift-package-manager), or [its official documentation](https://github.com/apple/swift-package-manager/tree/master/Documentation).
 
